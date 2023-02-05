@@ -1,6 +1,12 @@
 version: "3.3"
 services:
-
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb/data:/data/db
   zookeeper:
     image: zookeeper
     container_name: zookeeper
@@ -10,13 +16,13 @@ services:
     env_file:
       - env.list
     volumes:
-      - ./kafka-mqtt-connect/zookeeper/data:/data
-      - ./kafka-mqtt-connect/zookeeper/datalog:/datalog
+      - ./mqtt-to-kafka/zookeeper/data:/data
+      - ./mqtt-to-kafka/zookeeper/datalog:/datalog
   kafka:
     image: bitnami/kafka
     container_name: kafka
     ports:
-      - "9095:9092"
+      - "9092:9092"
     env_file:
       - env.list
     depends_on:
@@ -28,16 +34,29 @@ services:
     container_name: mosquitto
     volumes:
       #- ./kafka-mqtt-connect/config/:/mosquitto/config/:rw
-      - ./kafka-mqtt-connect/log/:/mosquitto/log/
+      - ./mqtt-to-kafka/log/:/mosquitto/log/
       - data:/mosquitto/data/
     ports:
       - "1883:1883"
   mqtt-to-kafka:
-    build: ./kafka-mqtt-connect
+    build: ./mqtt-to-kafka
     container_name: mqtt-to-kafka
     depends_on:
       - kafka
       - mosquitto
+    volumes:
+      - ./mqtt-to-kafka:/mqtt-to-kafka
+    command: python /mqtt-to-kafka/mqtt_to_kafka.py
+  spark-streaming:
+    build: ./spark-streaming
+    container_name: spark-streaming
+    depends_on:
+      - kafka
+      - mongodb
+      - mqtt-to-kafka
+    volumes:
+      - ./spark-streaming:/spark-streaming
+    command: spark-submit --master local[*] /app/streaming.py 
   prediction:
     build: ./prediction-code
     container_name: prediction
