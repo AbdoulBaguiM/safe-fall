@@ -14,7 +14,6 @@ RUN python3 -m ensurepip
 RUN pip3 install --upgrade pip
 RUN pip3 install pyspark
 RUN pip3 install firebase-admin
-RUN pip3 install pandas
 
 # set environment variables
 ENV SPARK_HOME /opt/spark
