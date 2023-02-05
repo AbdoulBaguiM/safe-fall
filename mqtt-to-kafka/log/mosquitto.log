@@ -294,3 +294,22 @@
 1675609207: New client connected from 172.18.0.1:33306 as auto-41650A7C-B6C1-3ADF-A81A-3C382547273A (p2, c1, k60).
 1675609208: New connection from 172.18.0.8:33879 on port 1883.
 1675609208: New client connected from 172.18.0.8:33879 as auto-6F3215AE-6647-2423-959B-1DCC01E50F1F (p2, c1, k60).
+1675610851: Client auto-41650A7C-B6C1-3ADF-A81A-3C382547273A closed its connection.
+1675610852: Client auto-6F3215AE-6647-2423-959B-1DCC01E50F1F closed its connection.
+1675610852: mosquitto version 2.0.15 terminating
+1675610852: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675610968: mosquitto version 2.0.15 starting
+1675610968: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675610968: Opening ipv4 listen socket on port 1883.
+1675610968: Opening ipv6 listen socket on port 1883.
+1675610968: mosquitto version 2.0.15 running
+1675610969: New connection from 172.19.0.1:53386 on port 1883.
+1675610969: New client connected from 172.19.0.1:53386 as auto-86739B7A-1875-8593-691B-862CA5A40742 (p2, c1, k60).
+1675610970: New connection from 172.19.0.7:44279 on port 1883.
+1675610970: New client connected from 172.19.0.7:44279 as auto-0AA4FA89-F79F-C0E9-E620-EBC13625436D (p2, c1, k60).
+1675611077: New connection from 105.71.17.234:42213 on port 1883.
+1675611077: New client connected from 105.71.17.234:42213 as ESP8266Client (p2, c1, k15).
+1675611211: Client auto-86739B7A-1875-8593-691B-862CA5A40742 closed its connection.
+1675611211: Client auto-0AA4FA89-F79F-C0E9-E620-EBC13625436D closed its connection.
+1675611212: mosquitto version 2.0.15 terminating
+1675611212: Saving in-memory database to /mosquitto/data//mosquitto.db.
