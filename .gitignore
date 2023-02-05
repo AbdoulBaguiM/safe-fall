@@ -1,0 +1,22 @@
+# Ignoring all volumes
+./mongodb/data
+./mqtt-to-kafka/zookeeper/data
+./mqtt-to-kafka/zookeeper/datalog
+/var/run/docker.sock
+./mqtt-to-kafka/log
+data
+./mqtt-to-kafka
+./spark-streaming
+./prediction-code
+
+# Ignoring all subdirectories of volumes
+./mongodb/data/**
+./mqtt-to-kafka/zookeeper/data/**
+./mqtt-to-kafka/zookeeper/datalog/**
+/var/run/docker.sock/**
+./mqtt-to-kafka/log/**
+data/**
+./mqtt-to-kafka/**
+./spark-streaming/**
+./prediction-code/**
+

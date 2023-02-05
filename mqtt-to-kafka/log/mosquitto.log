@@ -268,3 +268,29 @@
 1675608373: New client connected from 192.168.224.1:60578 as auto-93F24C8F-008A-4F66-061F-AFD983BF9122 (p2, c1, k60).
 1675608374: New connection from 192.168.224.7:58519 on port 1883.
 1675608374: New client connected from 192.168.224.7:58519 as auto-46F9E2E2-A0A5-E096-5EA7-1F70FAD2D4E1 (p2, c1, k60).
+1675609095: Client auto-93F24C8F-008A-4F66-061F-AFD983BF9122 closed its connection.
+1675609096: Client auto-46F9E2E2-A0A5-E096-5EA7-1F70FAD2D4E1 closed its connection.
+1675609096: mosquitto version 2.0.15 terminating
+1675609096: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675609118: mosquitto version 2.0.15 starting
+1675609118: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675609118: Opening ipv4 listen socket on port 1883.
+1675609118: Opening ipv6 listen socket on port 1883.
+1675609118: mosquitto version 2.0.15 running
+1675609120: New connection from 192.168.240.1:59366 on port 1883.
+1675609120: New client connected from 192.168.240.1:59366 as auto-76625CE4-B2B2-5A58-3C76-62051BAAA103 (p2, c1, k60).
+1675609121: New connection from 192.168.240.5:46541 on port 1883.
+1675609121: New client connected from 192.168.240.5:46541 as auto-A96350E1-CCE7-EFB6-C10C-FB217978E6EE (p2, c1, k60).
+1675609174: Client auto-76625CE4-B2B2-5A58-3C76-62051BAAA103 closed its connection.
+1675609175: Client auto-A96350E1-CCE7-EFB6-C10C-FB217978E6EE closed its connection.
+1675609175: mosquitto version 2.0.15 terminating
+1675609175: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675609205: mosquitto version 2.0.15 starting
+1675609205: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675609205: Opening ipv4 listen socket on port 1883.
+1675609205: Opening ipv6 listen socket on port 1883.
+1675609205: mosquitto version 2.0.15 running
+1675609207: New connection from 172.18.0.1:33306 on port 1883.
+1675609207: New client connected from 172.18.0.1:33306 as auto-41650A7C-B6C1-3ADF-A81A-3C382547273A (p2, c1, k60).
+1675609208: New connection from 172.18.0.8:33879 on port 1883.
+1675609208: New client connected from 172.18.0.8:33879 as auto-6F3215AE-6647-2423-959B-1DCC01E50F1F (p2, c1, k60).
