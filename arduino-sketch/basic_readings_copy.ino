@@ -8,10 +8,10 @@
 
 const char* ssid = SECRET_SSID;
 const char* password = SECRET_PASS;
-const char* mqttServer = "178.128.46.160";
-const int mqttPort = 1883;
-const char* mqttUser = "abdoulbaguim";
-const char* mqttPassword = "abd37abdel";
+const char* mqttServer = SECRET_MQTT_SERVER;
+const int mqttPort = SECRET_MQTT_PORT;
+const char* mqttUser = SECRET_MQTT_USER;
+const char* mqttPassword = SECRET_MQTT_PASSWORD;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
