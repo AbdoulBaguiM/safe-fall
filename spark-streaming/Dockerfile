@@ -13,6 +13,8 @@ RUN apk add --no-cache python3
 RUN python3 -m ensurepip
 RUN pip3 install --upgrade pip
 RUN pip3 install pyspark
+RUN pip3 install firebase-admin
+RUN pip3 install pandas
 
 # set environment variables
 ENV SPARK_HOME /opt/spark
@@ -22,6 +24,10 @@ RUN echo "spark.jars.packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1" 
 
 # copy the Spark Streaming code to the Docker image
 COPY streaming.py /app/
+
+# copy the Firebase Credentials
+COPY serviceAccountKey.json /app/serviceAccountKey.json
+
 WORKDIR /app
 
 # run the Spark Streaming code
