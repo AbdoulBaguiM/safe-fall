@@ -1,29 +1,28 @@
-FROM openjdk:14-alpine
+FROM openjdk:8-jdk-alpine
 
-# Set environment variables
-ENV SPARK_HOME /spark
+RUN apk add --no-cache curl tar bash
 
-# Install wget
-RUN apk update \
-    && apk add wget
+# install Spark
+ARG SPARK_VERSION=3.3.1
+ARG HADOOP_VERSION=3
+RUN curl -s https://archive.apache.org/dist/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz | tar -xz -C /opt/
+RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} /opt/spark
 
-# Install Spark
-RUN wget https://downloads.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz \
-    && tar xzf spark-3.3.1-bin-hadoop3.tgz \
-    && mv spark-3.3.1-bin-hadoop3 $SPARK_HOME \
-    && rm spark-3.3.1-bin-hadoop3.tgz
+# install Python and dependencies for pyspark
+RUN apk add --no-cache python3
+RUN python3 -m ensurepip
+RUN pip3 install --upgrade pip
+RUN pip3 install pyspark
 
-# Set Spark environment variables
-ENV PATH=$PATH:$SPARK_HOME/bin
+# set environment variables
+ENV SPARK_HOME /opt/spark
+ENV PYSPARK_PYTHON python3
 
-# Install Python and pyspark
-RUN apk add python3 \
-    && apk add py3-pip \
-    && pip3 install pyspark
+RUN echo "spark.jars.packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1" >> $SPARK_HOME/conf/spark-defaults.conf
 
-# Copy the script into the container
-COPY streaming.py .
+# copy the Spark Streaming code to the Docker image
+COPY streaming.py /app/
+WORKDIR /app
 
-# Run the script
-CMD [ "spark-submit", "streaming.py" ]
-
+# run the Spark Streaming code
+CMD ["spark-submit", "streaming.py"]

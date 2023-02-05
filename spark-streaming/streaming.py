@@ -25,4 +25,3 @@ df.writeStream\
   .foreachBatch(process_rdd)\
   .start()\
   .awaitTermination()
-
