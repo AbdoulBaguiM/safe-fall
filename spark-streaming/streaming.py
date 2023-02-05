@@ -4,26 +4,47 @@ from pyspark.sql.types import *
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import requests
+import math
 
 def process_rdd(df, epoch_id):
-    if not df.rdd.isEmpty():
-        # Initialize Firebase
-        if not firebase_admin._apps:
-            cred = credentials.Certificate("/app/serviceAccountKey.json")
-            firebase_admin.initialize_app(cred, name='safe-fall')
+    data = df.rdd.map(lambda x: x[1]).collect()
+    for value in data:
+        value = value.decode('utf-8')
+        x, y, z = value.split(", ")
+        x = math.ceil(float(x.split(":")[1]))
+        y = math.ceil(float(y.split(":")[1]))
+        z = math.ceil(float(z.split(":")[1]))
         
-        db = firestore.client(app=firebase_admin.get_app(name='safe-fall'))
+        data = {
+            "ADXL345_x": x,
+            "ADXL345_y": y,
+            "ADXL345_z": z
+        }
 
-        # Write data to Firebase Realtime Database
-        rows = df.collect()
-        for row in rows:
-            data = {}
-            for i in range(len(df.columns)):
-                value = row[i]
-                if isinstance(value, bytearray):
-                    value = value.decode('utf-8')
-                data[df.columns[i]] = value
+        headers = {
+            'content-type': 'application/json',
+        }
+        url = "https://bigml.io/andromeda/prediction?username=AbdoulBaguiM;api_key=97960277d127a8afd22b0d927dda3cac00acb56e"
+        response = requests.post(url, headers=headers, json={'model': "model/6389010eaba2df2a5c00031a", 'input_data': data})
+        prediction = response.json()
+        
+        # Save prediction result to the document
+        result = prediction["output"]
+        
+        # Check if prediction is "Fall"
+        if result == "Fall":
+            # Save prediction result to Firestore
+            data = {
+                "result": result,
+		"values": data
+            }
             db.collection("fall_detection_data").document().set(data)
+
+# Initialize Firebase App
+cred = credentials.Certificate("/app/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+db = firestore.client()
 
 spark = SparkSession.builder.appName("Spark Streaming with MongoDB").getOrCreate()
 

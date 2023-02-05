@@ -356,3 +356,95 @@
 1675618329: New connection from 105.71.17.234:34522 on port 1883.
 1675618329: New client connected from 105.71.17.234:34522 as ESP8266Client (p2, c1, k15).
 1675618996: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675620183: Client ESP8266Client has exceeded timeout, disconnecting.
+1675620488: Client auto-FD13D82A-E0BB-B856-16DD-9656944733F6 closed its connection.
+1675620489: Client auto-4F7A6ED0-D4B8-6C4F-A8A3-C2CA87F6F564 closed its connection.
+1675620489: mosquitto version 2.0.15 terminating
+1675620489: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675620871: mosquitto version 2.0.15 starting
+1675620871: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675620871: Opening ipv4 listen socket on port 1883.
+1675620871: Opening ipv6 listen socket on port 1883.
+1675620871: mosquitto version 2.0.15 running
+1675620874: New connection from 172.21.0.5:40137 on port 1883.
+1675620874: New client connected from 172.21.0.5:40137 as auto-E9C2EF55-558C-0D89-5565-046AE53F501F (p2, c1, k60).
+1675620919: New connection from 105.71.17.234:60202 on port 1883.
+1675620919: New client connected from 105.71.17.234:60202 as ESP8266Client (p2, c1, k15).
+1675621141: Client ESP8266Client has exceeded timeout, disconnecting.
+1675621742: Client auto-E9C2EF55-558C-0D89-5565-046AE53F501F closed its connection.
+1675621743: mosquitto version 2.0.15 terminating
+1675621743: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675623184: mosquitto version 2.0.15 starting
+1675623184: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675623184: Opening ipv4 listen socket on port 1883.
+1675623184: Opening ipv6 listen socket on port 1883.
+1675623184: mosquitto version 2.0.15 running
+1675623187: New connection from 172.22.0.5:37345 on port 1883.
+1675623187: New client connected from 172.22.0.5:37345 as auto-763AAC25-54AD-61E5-3988-8A5D545CF499 (p2, c1, k60).
+1675623240: New connection from 105.71.17.234:46768 on port 1883.
+1675623240: New client connected from 105.71.17.234:46768 as ESP8266Client (p2, c1, k15).
+1675623350: Client auto-763AAC25-54AD-61E5-3988-8A5D545CF499 closed its connection.
+1675623350: mosquitto version 2.0.15 terminating
+1675623350: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675623419: mosquitto version 2.0.15 starting
+1675623419: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675623419: Opening ipv4 listen socket on port 1883.
+1675623419: Opening ipv6 listen socket on port 1883.
+1675623419: mosquitto version 2.0.15 running
+1675623421: New connection from 172.23.0.5:34095 on port 1883.
+1675623421: New client connected from 172.23.0.5:34095 as auto-EB85F1C5-CB00-EC5D-F1C8-6C9C81519FFE (p2, c1, k60).
+1675623644: New connection from 105.71.17.234:37909 on port 1883.
+1675623644: New client connected from 105.71.17.234:37909 as ESP8266Client (p2, c1, k15).
+1675623863: Client ESP8266Client has exceeded timeout, disconnecting.
+1675623980: Client auto-EB85F1C5-CB00-EC5D-F1C8-6C9C81519FFE closed its connection.
+1675623980: mosquitto version 2.0.15 terminating
+1675623980: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675624021: mosquitto version 2.0.15 starting
+1675624021: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675624021: Opening ipv4 listen socket on port 1883.
+1675624021: Opening ipv6 listen socket on port 1883.
+1675624021: mosquitto version 2.0.15 running
+1675624023: New connection from 172.24.0.5:50035 on port 1883.
+1675624023: New client connected from 172.24.0.5:50035 as auto-AC1F27F9-972E-1503-D5BF-00ED7DCE1DDB (p2, c1, k60).
+1675624089: New connection from 105.71.17.234:58594 on port 1883.
+1675624089: New client connected from 105.71.17.234:58594 as ESP8266Client (p2, c1, k15).
+1675624279: Client auto-AC1F27F9-972E-1503-D5BF-00ED7DCE1DDB closed its connection.
+1675624280: mosquitto version 2.0.15 terminating
+1675624280: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675624664: mosquitto version 2.0.15 starting
+1675624664: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675624664: Opening ipv4 listen socket on port 1883.
+1675624664: Opening ipv6 listen socket on port 1883.
+1675624664: mosquitto version 2.0.15 running
+1675624666: New connection from 172.25.0.5:37849 on port 1883.
+1675624666: New client connected from 172.25.0.5:37849 as auto-305ECD5C-CFFB-2470-FC5C-2F27E2D66303 (p2, c1, k60).
+1675624880: New connection from 105.71.17.234:48537 on port 1883.
+1675624880: New client connected from 105.71.17.234:48537 as ESP8266Client (p2, c1, k15).
+1675625275: New connection from 105.71.17.234:37419 on port 1883.
+1675625275: Client ESP8266Client already connected, closing old connection.
+1675625275: New client connected from 105.71.17.234:37419 as ESP8266Client (p2, c1, k15).
+1675625300: Client ESP8266Client has exceeded timeout, disconnecting.
+1675625885: Client auto-305ECD5C-CFFB-2470-FC5C-2F27E2D66303 closed its connection.
+1675625886: mosquitto version 2.0.15 terminating
+1675625886: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675626067: mosquitto version 2.0.15 starting
+1675626067: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675626067: Opening ipv4 listen socket on port 1883.
+1675626067: Opening ipv6 listen socket on port 1883.
+1675626067: mosquitto version 2.0.15 running
+1675626069: New connection from 172.26.0.5:33857 on port 1883.
+1675626069: New client connected from 172.26.0.5:33857 as auto-06696FBA-9562-D3C8-4E74-AB738F7EACAE (p2, c1, k60).
+1675626081: New connection from 105.71.17.234:59862 on port 1883.
+1675626081: New client connected from 105.71.17.234:59862 as ESP8266Client (p2, c1, k15).
+1675626445: Client auto-06696FBA-9562-D3C8-4E74-AB738F7EACAE closed its connection.
+1675626446: mosquitto version 2.0.15 terminating
+1675626446: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1675626743: mosquitto version 2.0.15 starting
+1675626743: Config loaded from /mosquitto_temp/config/mosquitto.conf.
+1675626743: Opening ipv4 listen socket on port 1883.
+1675626743: Opening ipv6 listen socket on port 1883.
+1675626743: mosquitto version 2.0.15 running
+1675626745: New connection from 172.27.0.5:33823 on port 1883.
+1675626745: New client connected from 172.27.0.5:33823 as auto-80B85E9B-B857-B77B-9B26-150F8EFC77E6 (p2, c1, k60).
+1675626756: New connection from 105.71.17.234:48258 on port 1883.
+1675626756: New client connected from 105.71.17.234:48258 as ESP8266Client (p2, c1, k15).

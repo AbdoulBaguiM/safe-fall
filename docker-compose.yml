@@ -48,14 +48,6 @@ services:
       - mqtt-to-kafka
     volumes:
       - ./spark-streaming:/spark-streaming
-    command: spark-submit --master local[*] /app/streaming.py 
-  prediction:
-    build: ./prediction-code
-    container_name: prediction
-    depends_on:
-      - mosquitto
-    volumes:
-      - ./prediction-code:/prediction-code
-    command: python /prediction-code/prediction.py 
+    command: spark-submit --master local[*] /app/streaming.py
 volumes:
   data: ~
