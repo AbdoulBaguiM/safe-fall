@@ -25,8 +25,8 @@ def process_rdd(df, epoch_id):
         headers = {
             'content-type': 'application/json',
         }
-        url = "https://bigml.io/andromeda/prediction?username=AbdoulBaguiM;api_key=97960277d127a8afd22b0d927dda3cac00acb56e"
-        response = requests.post(url, headers=headers, json={'model': "model/6389010eaba2df2a5c00031a", 'input_data': data})
+        url = "BIGML_URL"
+        response = requests.post(url, headers=headers, json={'model': "MODEL_ID", 'input_data': data})
         prediction = response.json()
         
         # Save prediction result to the document
