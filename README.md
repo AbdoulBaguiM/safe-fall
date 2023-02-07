@@ -4,7 +4,7 @@
 This project involves building a fall detection device using an Arduino MKR1010 and MPU6050 sensor, and a machine learning model built and trained on BigML analysis tool with the Sysfall dataset downloaded from Kaggle. 
 
 ## Architecture
-![Fall Detection System Architecture](<image_url>)
+![Fall Detection System Architecture](<https://github.com/AbdoulBaguiM/safe-fall/blob/main/architecture.png>)
 
 The project consists of several services that work together to detect falls. The data flow is as follows:
 1. The fall detection device sends data to the Mosquitto MQTT broker.
